@@ -102,7 +102,7 @@ ul {
 
 .indicator::before {
 	content: '';
-	width: 80%;
+	width: 70%;
 	height: 16px; 
 	position: absolute;
 	bottom: 14px;
