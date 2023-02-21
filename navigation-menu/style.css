@@ -29,13 +29,13 @@ nav {
 	background: var(--navbar-background-color);
 }
 
-nav ul {
+ul {
 	width: 300px;
 	display: flex;
 	position: relative;
 }
 
-ul li {
+.list {
 	width: 80px;
 	height: 80px;
 	position: relative;
