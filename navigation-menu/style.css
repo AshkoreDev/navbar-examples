@@ -20,7 +20,7 @@ header {
 }
 
 nav {
-	width: 320px;
+	width: 450px;
 	height: 80px;
 	display: flex;
 	justify-content: center;
@@ -30,7 +30,7 @@ nav {
 }
 
 ul {
-	width: 300px;
+	width: 400px;
 	display: flex;
 	position: relative;
 }
@@ -90,7 +90,7 @@ ul {
 }
 
 .indicator {
-	width: 60px;
+	width: 80px;
 	height: 80px;
 	display: flex;
 	align-items: center;
@@ -108,4 +108,20 @@ ul {
 	bottom: 14px;
 	border-radius: 10px;
 	background: var(--indicator-color);
+}
+
+li:nth-child(2).active ~ .indicator {
+	transform: translateX(calc(80px * 1));
+}
+
+li:nth-child(3).active ~ .indicator {
+	transform: translateX(calc(80px * 2));
+}
+
+li:nth-child(4).active ~ .indicator {
+	transform: translateX(calc(80px * 3));
+}
+
+li:nth-child(5).active ~ .indicator {
+	transform: translateX(calc(80px * 4));
 }
