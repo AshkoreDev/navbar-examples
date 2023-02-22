@@ -129,6 +129,8 @@ a {
 }
 
 .item.active .item--circle {
+	transition: .5s;
+	transition-delay: .5s;
 	transform: translateY(-37px) scale(1);
 }
 
