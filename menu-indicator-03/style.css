@@ -1,0 +1,149 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #06021b;
+}
+
+nav {
+	width: 400px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 10px;
+	background: linear-gradient(45deg, #2196f3, #e91e63);
+}
+
+.list {
+	width: 350px;
+	display: flex;
+}
+
+.item {
+	width: 70px;
+	height: 70px; 
+	position: relative;
+	list-style: none;
+	z-index: 1;
+}
+
+a {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	font-weight: 500;
+	text-align: center;
+}
+
+.item--icon {
+	display: block;
+	position: relative;
+	color: #fff;
+	font-size: 1.5em;
+	line-height: 75px;
+	text-align: center; 
+	transition: .5s;
+}
+
+.item.active .item--icon {
+	transform: translateY(-32px);
+}
+
+.item--text {
+	position: absolute;
+	color: #fff;
+	font-size: .75em;
+	font-weight: 400;
+	letter-spacing: .05em;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: .5s;
+}
+
+.item.active .item--text {
+	opacity: 1;
+	transform: translateY(10px);
+}
+
+.indicator {
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -50%;
+	border: 6px solid #06021b;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #2196f3, #e91e63);
+	transition: .5s;
+}
+
+.indicator::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: -22px;
+	border-top-right-radius: 20px;
+	background: transparent;
+	box-shadow: 1px -10px 0 #06021b;
+}
+
+.indicator::after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	right: -22px;
+	border-top-left-radius: 20px;
+	background: transparent;
+	box-shadow: -1px -10px 0 #06021b;
+}
+
+.item--circle {
+	width: 50px;
+	height: 50px;
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+	border: 1.8px solid #fff;
+	background: transparent;
+	transition: .5s;
+	transform: translateY(-37px) scale(0);
+}
+
+.item.active .item--circle {
+	transform: translateY(-37px) scale(1);
+}
+
+.item:nth-child(2).active ~ .indicator {
+	transform: translateX(calc(70px * 1));
+}
+
+.item:nth-child(3).active ~ .indicator {
+	transform: translateX(calc(70px * 2));
+}
+
+.item:nth-child(4).active ~ .indicator {
+	transform: translateX(calc(70px * 3));
+}
+
+.item:nth-child(5).active ~ .indicator {
+	transform: translateX(calc(70px * 4));
+}

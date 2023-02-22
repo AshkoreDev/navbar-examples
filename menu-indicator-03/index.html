@@ -10,7 +10,7 @@
 	<header>
 		<nav>
 			<ul class="list">
-				<li class="item">
+				<li class="item active">
 					<a href="#">
 						<span class="item--icon">
 							<ion-icon name="home-outline"></ion-icon>
@@ -55,6 +55,7 @@
 						<span class="item--circle"></span>
 					</a>
 				</li>
+				<li class="indicator"></li>
 			</ul>
 		</nav>
 	</header>
@@ -62,5 +63,16 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+	<script>
+		const item = document.querySelectorAll('.item');
+
+		function activeLink() {
+
+			item.forEach(el => el.classList.remove('active'));
+			this.classList.add('active');
+		}
+
+		item.forEach(el => el.addEventListener('click', activeLink));
+	</script>
 </body>
 </html>
