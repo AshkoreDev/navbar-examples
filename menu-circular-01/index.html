@@ -13,7 +13,7 @@
 			<div class="toggle">
 				<ion-icon name="add-outline"></ion-icon>
 			</div>
-			<li style="--i:0;">
+			<li style="--i:0;" class="active">
 				<a href="#"><ion-icon name="home-outline"></ion-icon></a>
 			</li>
 			<li style="--i:1;">
@@ -37,6 +37,8 @@
 			<li style="--i:7;">
 				<a href="#"><ion-icon name="videocam-outline"></ion-icon></a>
 			</li>
+
+			<div class="indicator"></div>
 		</ul>
 	</header>
 
@@ -53,6 +55,16 @@
 			menu.classList.toggle('active');
 			menuToggle.classList.toggle('active');
 		}
+
+		const list = document.querySelectorAll('li');
+
+		function activelink() {
+
+			list.forEach(item => item.classList.remove('active'));
+			this.classList.add('active');
+		}
+
+		list.forEach(item => item.addEventListener('click', activelink));
 
 	</script>
 
