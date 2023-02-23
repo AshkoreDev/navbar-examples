@@ -12,35 +12,35 @@
 		<nav>
 			<ul class="list">
 				<li class="item active" style="--clr: #f44336">
-					<a href="">
+					<a href="#">
 						<span class="item--icon">
 							<ion-icon name="home-outline"></ion-icon>
 						</span>
 					</a>
 				</li>
 				<li class="item" style="--clr: #">
-					<a href="">
+					<a href="#">
 						<span class="item--icon">
 							<ion-icon name="person-outline"></ion-icon>
 						</span>
 					</a>
 				</li>
 				<li class="item" style="--clr: #">
-					<a href="">
+					<a href="#">
 						<span class="item--icon">
 							<ion-icon name="chatbubble-outline"></ion-icon>
 						</span>
 					</a>
 				</li>
 				<li class="item" style="--clr: #">
-					<a href="">
+					<a href="#">
 						<span class="item--icon">
 							<ion-icon name="image-outline"></ion-icon>
 						</span>
 					</a>
 				</li>
 				<li class="item" style="--clr: #">
-					<a href="">
+					<a href="#">
 						<span class="item--icon">
 							<ion-icon name="settings-outline"></ion-icon>
 						</span>
@@ -54,6 +54,20 @@
 
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<script>
+		
+		const item = document.querySelectorAll('.item');
+
+		function activeLink() {
+
+			item.forEach(element => element.classList.remove('active'));
+			this.classList.add('active');
+		}
+
+		item.forEach(element => element.addEventListener('click', activeLink));
+
+	</script>	
 
 </body>
 </html>
