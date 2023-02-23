@@ -1,0 +1,43 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #222237;
+}
+
+.menu {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.toggle {
+	width: 75px;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	color: #222327;
+	font-size: 3em;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.toggle.active {
+	box-shadow: 0 0 0 60px #fff;
+	transform: rotate(315deg);
+}
