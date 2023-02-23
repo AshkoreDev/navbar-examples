@@ -38,6 +38,36 @@ header {
 }
 
 .toggle.active {
-	box-shadow: 0 0 0 60px #fff;
+	color: #fff;
+	background: #222237;
+	box-shadow: 0 0 0 68px #fff;
 	transform: rotate(315deg);
+}
+
+.menu li {
+	position: absolute;
+	left: 10px;
+	list-style: none;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10px;
+	transition: 0.5s;
+	transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+	transform-origin: 140px;
+}
+
+.menu.active li {
+	opacity: 1;
+	visibility: visible;
+}
+
+.menu a {
+	width: 55px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #222327;
+	font-size: 1.75em;
+	transform: rotate(calc(360deg / -8 * var(--i)));
 }
