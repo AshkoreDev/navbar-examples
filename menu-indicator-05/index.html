@@ -51,5 +51,24 @@
 
 	</header>
 
+	<script>
+		
+		const items = document.querySelectorAll('.nav__item');
+		const indicator = document.querySelector('.indicator');
+
+		function moveLight({offsetLeft, offsetWidth}) {
+
+			indicator.style.left = `${offsetLeft - offsetWidth/4}px`;
+		}
+
+		items.forEach(item => {
+
+			item.addEventListener('click', (e) => {
+
+				moveLight(e.target);
+			});
+		});
+
+	</script>
 </body>
 </html>
