@@ -1,0 +1,75 @@
+:root {
+	--tab-color: #191919;
+	--white-color: #fff;
+	--home-icon-color: #00f4ff;
+	--heart-icon-color: #ff0000;
+	--plus-icon-color: #adff2f;
+	--user-icon-color: #ee82ee;
+	--bell-icon-color: #ffff00;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+li {
+	display: inline-block;
+	list-style: none;
+}
+
+nav {
+	width: 30em;
+	height: 8em;
+	padding: 0 2em;
+	display: flex;
+	align-items: center;
+	position: relative;
+	border-radius: 2em;
+	overflow: hidden;
+	background: var(--tab-color);
+	box-shadow: 0 1em 1em rgba(0,0,0, .2);
+}
+
+.nav__list {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav__item a {
+	color: var(--white-color);
+	font-size: 2.5rem;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.indicator {
+	width: 4em;
+	height: .4em; 
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 1.3em;
+	border-radius: 2px;
+	background: var(--white-color);
+}
+
+.indicator::before {
+	content: '';
+	width: 5em;
+	height: 7em;
+	position: absolute;
+	top: .4em;
+	background: linear-gradient(to bottom, rgba(255,255,255, .3) -50%, rgba(255,255,255, 0) 90%);
+	clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
+}
