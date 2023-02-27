@@ -14,7 +14,7 @@
 		<nav>
 			<ul class="nav__list">
 
-				<li class="nav__item">
+				<li class="nav__item active">
 					<a href="#">
 						<i class='bx bx-home'></i>
 					</a>
@@ -61,11 +61,20 @@
 			indicator.style.left = `${offsetLeft - offsetWidth/4}px`;
 		}
 
+		function activeLink(itemActive) {
+
+			items.forEach(item => {
+				item.classList.remove('active');
+				itemActive.classList.add('active');
+			});
+		}
+
 		items.forEach(item => {
 
 			item.addEventListener('click', (e) => {
 
 				moveLight(e.target);
+				activeLink(item);
 			});
 		});
 
