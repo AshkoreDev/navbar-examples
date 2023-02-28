@@ -14,12 +14,12 @@ header {
 }
 
 li {
-	margin: 10px 0;
+	margin: 20px 0;
 	list-style: none;
 }
 
 a {
-	padding: 5px;
+	padding: 10px;
 	color: #aeaeae;
 	font-size: 1.2em;
 	text-decoration: none;
